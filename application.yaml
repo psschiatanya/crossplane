@@ -12,7 +12,7 @@ spec:
   project: default
   source:
     path: azure
-    repoURL: https://github.com/foxutech/crossplane.git
+    repoURL: https://github.com/psschiatanya/crossplane.git
     targetRevision: HEAD
   syncPolicy:
     syncOptions:
