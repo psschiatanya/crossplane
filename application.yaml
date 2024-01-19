@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: azure1
+    path: azure
     repoURL: https://github.com/psschiatanya/crossplane.git
     targetRevision: HEAD
   syncPolicy:
