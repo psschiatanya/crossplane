@@ -1,22 +1,20 @@
 apiVersion: pkg.crossplane.io/v1
 kind: Provider
 metadata:
- name: provider-azure
- annotations:
-   argocd.argoproj.io/sync-wave: "-1"
+  name: provider-azure-network
 spec:
- package: "crossplane/provider-azure:master"
+  package: xpkg.upbound.io/upbound/provider-azure-network:v0.34.0
+ 
 ---
-apiVersion: azure.crossplane.io/v1beta1
-kind: ProviderConfig
+
+apiVersion: azure.upbound.io/v1beta1
 metadata:
- name: default
- annotations:
-   argocd.argoproj.io/sync-wave: "-1"
+  name: default
+kind: ProviderConfig
 spec:
- credentials:
-   source: Secret
-   secretRef:
-     namespace: crossplane-system
-     name: azure-secret
-     key: creds
+  credentials:
+    source: Secret
+    secretRef:
+      namespace: crossplane-system
+      name: azure-secret
+      key: creds
