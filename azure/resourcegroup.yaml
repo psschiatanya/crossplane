@@ -1,8 +1,9 @@
-apiVersion: azure.crossplane.io/v1alpha3
+apiVersion: azure.upbound.io/v1beta1
 kind: ResourceGroup
 metadata:
- name: siva1-crossplane
- annotations:
-   argocd.argoproj.io/sync-wave: "1"
+  name: example-rg
 spec:
- location: eastus
+  forProvider:
+    location: "East US"
+  providerConfigRef:
+    name: default
