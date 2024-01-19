@@ -1,7 +1,7 @@
 apiVersion: azure.crossplane.io/v1alpha3
 kind: ResourceGroup
 metadata:
- name: rg-crossplane
+ name: siva1-crossplane
  annotations:
    argocd.argoproj.io/sync-wave: "1"
 spec:
